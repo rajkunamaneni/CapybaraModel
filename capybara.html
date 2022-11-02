@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Capybara</title>
+</head>
+
+<body onload="main()">
+  <h1 style="font-family: Arial">Capybara</h1>
+  <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+  </canvas>
+
+  <p style="font-family: Arial" id="numdot"> INPUT DATA </p>
+
+  <!-- Turn ON or OFF the animation -->
+  <p style="font-family: Arial">
+    Animation Time:
+    <button type="button" id="ON">ON</button>
+    <button type="button" id="OFF">OFF</button>
+  </p>
+
+  <!-- Camera Slider -->
+  <p style="font-family: Arial">
+    Camera View (X) <input type="range" min="0" max="360" value="50" class="slider" id="angleSlide">
+    Camera View (Y) <input type="range" min="0" max="360" value="0" class="slider" id="angleSlide2">
+  </p>
+
+  <!-- Movement for Joints -->
+  <p style="font-family: Arial">
+    Head <input type="range" min="-5" max="6" value="0" class="slider" id="headslider">
+    Body <input type="range" min="-2" max="0" value="0" class="slider" id="bodyslider">
+  </p>
+
+  <!-- legs -->
+  <p style="font-family: Arial">
+    Front Leg #1 <input type="range" min="-25" max="25" value="0" class="slider" id="f1slider">
+    Front Leg #2 <input type="range" min="-25" max="25" value="0" class="slider" id="f2slider">
+  </p>
+
+  <p style="font-family: Arial">
+    Back Hind #1 <input type="range" min="-5" max="5" value="0" class="slider" id="backhind1slider">
+    Back Hind #2 <input type="range" min="-5" max="5" value="0" class="slider" id="backhind2slider">
+  </p>
+
+  <p style="font-family: Arial">
+    Back Front #1 <input type="range" min="-10" max="10" value="0" class="slider" id="backleg1slider">
+    Back Front #2 <input type="range" min="-10" max="10" value="0" class="slider" id="backleg2slider">
+  </p>
+
+  <!-- Description -->
+  <p style="font-family: Arial">
+    Features to Highlight! <br>
+    1. Press the <b>ON</b> Animation to see the Capybara walk! <br>
+    2. Use the <b>Poke</b> action by pressing shift key and clicking on the canvas to see the Capybara run! <br>
+    3. Move the Capybara by pressing the canvas or the sliders to change the camera view. <br>
+  </p>
+
+  <!-- JS files -->
+  <script src="src/lib/"></script>
+  <script src="src/lib/webgl-debug.js"></script>
+  <script src="src/lib/cuon-utils.js"></script>
+  <script src="src/lib/cuon-matrix.js"></script>
+  <script src="src/model/Triangle.js"></script>
+  <script src="src/model/Cube.js"></script>
+  <script src="src/main/capybara.js"></script>
+</body>
+
+</html>
