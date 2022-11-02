@@ -1,2 +1,3 @@
 # CapybaraModel
-A Blocky Capybara using WebGL :)
+
+A Blocky Capybara using WebGL
